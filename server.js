@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('article-one',function(req,res){
-    res.send('Article-one requested and will be saved here');
+    res.send('article-one requested and will be saved here');
 });
 
 app.get('article-two',function(req,res){
