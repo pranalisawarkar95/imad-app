@@ -11,14 +11,10 @@ var articleOne = {
     date: 'sept 8, 2017',
     content:'
         <p>
-            This is the content for my first article. This is the content for my first article. This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-        </p>
-        <p>
-            This is the content for my first article. This is the content for my first article. This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-        </p>
-        <p>
-            This is the content for my first article. This is the content for my first article. This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-        </p> '
+            This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+        </p>'
+
+        
             
 };
 app.get('/', function (req, res) {
