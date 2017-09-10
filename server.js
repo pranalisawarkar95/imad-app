@@ -5,7 +5,6 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
 var articleOne = {
    title: 'Article one | pranali sawarkar',
    heading: 'Article one',
@@ -58,6 +57,7 @@ var htmlTemplate= `
 </html>';
 return htmlTemplate;
 }
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -65,7 +65,6 @@ app.get('/', function (req, res) {
 app.get('/article-one',function(req,res){
      res.send(createTemplate(articleOne));
 });
-
 app.get('/article-two',function(req,res){
      res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
@@ -86,6 +85,6 @@ app.get('/ui/madi.png', function (req, res) {
 // Use 8080 only for local development if you already have apache running on 80
 
 var port=80;
-app.listen(port, function() {
-  console.log(`IMAD course app listening on port ${port}!`);
+app.listen(port, function () {
+  console.log('IMAD course app listening on port ${port}!');
 });
