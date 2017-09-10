@@ -27,7 +27,7 @@ var articles={
       
 
 'article=two': {
-           title: 'Article two | pranali sawarkar',
+   title: 'Article two | pranali sawarkar',
    heading: 'Article two',
    date: 'sept 9, 2017',
   content:`
@@ -44,7 +44,7 @@ var articles={
     
 
 'article-three': {
-         title: 'Article three | pranali sawarkar',
+   title: 'Article three | pranali sawarkar',
    heading: 'Article three',
    date: 'sept 10, 2017',
   content:`
