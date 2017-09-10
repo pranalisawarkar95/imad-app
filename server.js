@@ -5,16 +5,22 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleone = { 
+var articleOne = {
+   title: 'Article one | pranali sawarkar',
+   heading: 'Article one',
+   date: 'sept 8, 2017',
+  content:`
+  <p>
+     This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+  </p>
+  <p>
+    This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+ </p>
+<p>
+    This is the content for my first article.This is the content for my first article. This is the content for my first article.This is the content for my first article.   
+ </p>`
 
-title: 'Article One',
-heading: 'Article One',
-date: 'Aug 18 2017',
-content:` <p>This is the paragraph tag.</p>
-<p>This is Another paragraph tag.</p>
-<p>This is One more paragraph tag.</p>`
-
-};
+};     
 
 function createtemplate (data){
 
@@ -26,7 +32,9 @@ var content = data.content;
 var htmltemplate =`
 <html>
 <head>
-    <title>${title}</title>
+    <title>
+    ${title}
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="/ui/style.css" rel="stylesheet" />
 </head>
@@ -40,10 +48,16 @@ var htmltemplate =`
     
     <h3>Article One</h3>
     
-    <div>${date}</div>
+    <div>
+   
+    ${date}
+    
+    </div>
     
     <div>
+        
         ${content}
+        
     </div>
     </div>
 </body>
@@ -51,22 +65,27 @@ var htmltemplate =`
 `;
 return htmltemplate;
 }
+
 app.get('/', function (req, res) {
-res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-app.get('/ui/style.css', function (req, res) {
-res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
-app.get('/ui/madi.png', function (req, res) {
-res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+    res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req, res){
-// articleName = article-one 
-// articles[articleName] == { content of the object of articles
-var articleone = req.params.articleName;
-res.send(createtemplate(articles[articleone]));
+app.get('/article-one',function(req,res){
+     res.send(createtemplate(article-One));
 });
+
+
+
+app.get('/ui/style.css', function (req, res) {
+    res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+
+app.get('/ui/madi.png', function (req, res) {
+    res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
+
+// Do not change port, otherwise your app won't run on IMAD servers
+// Use 8080 only for local development if you already have apache running on 80
 
 var port = 80;
 app.listen(port, function () {
