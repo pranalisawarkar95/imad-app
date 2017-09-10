@@ -6,19 +6,19 @@ var app = express();
 app.use(morgan('combined'));
 
 var articleOne = {
-    title: 'Article one | pranali sawarkar',
-    heading: 'Article one',
-    date: 'sept 8, 2017',
-    content:
-    <p>
-     i need to improve my skills
-    </p>
-    <p>
-     i need to improve my skills
-    </p>
-    <p>
-     this is article one
-     </p>
+title: 'Article one | pranali sawarkar',
+heading: 'Article one',
+date: 'sept 8, 2017',
+content:
+<p>
+i need to improve my skills
+</p>
+<p>
+i need to improve my skills
+</p>
+<p>
+this is article one
+</p>
 },
 'Article-two':{
 title: 'hi i am jegatheshwaran madurai tamilnadu',
