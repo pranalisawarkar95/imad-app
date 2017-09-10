@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articles={
     
-articleOne: {
+'article-one': {
         
    title: 'Article one | pranali sawarkar',
    heading: 'Article one',
@@ -26,7 +26,7 @@ articleOne: {
 },     
       
 
-articleTwo: {
+'article=two': {
            title: 'Article two | pranali sawarkar',
    heading: 'Article two',
    date: 'sept 9, 2017',
@@ -43,7 +43,7 @@ articleTwo: {
  },
     
 
-articleThree: {
+'article-three': {
          title: 'Article three | pranali sawarkar',
    heading: 'Article three',
    date: 'sept 10, 2017',
@@ -110,23 +110,18 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
-app.get('/article-one',function(req,res){
-     res.send(createtemplate(articleOne));
+app.get('/:articleName', function (req, res) {
+//articleName ==article-one
+//article[articlename]={} content for article one
+var articlename = req.params.articleName;
+res.send(createTemplate(articles[articlename]));
 });
 
 
-app.get('/article-two',function(req,res){
-     res.send(createtemplate(articleTwo));
-});
-
-
-app.get('/article-three',function(req,res){
-     res.send(createtemplate(articleThree));
-});
 app.get('/ui/style.css', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
+
 
 app.get('/ui/madi.png', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
