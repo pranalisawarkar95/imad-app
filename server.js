@@ -5,36 +5,21 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-   title: 'Article one | pranali sawarkar',
-   heading: 'Article one',
-   date: 'sept 8, 2017',
-  content: '
-  <p>
-     This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-  </p>
-  <p>
-    This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
- </p>
-<p>
-    This is the content for my first article.This is the content for my first article. This is the content for my first article.This is the content for my first article.   
- </p>'
-};
        
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.send('Article one requested and will besaved here');
 });
 
 app.get('/article-two',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+    res.send('Article two requested and will besaved here');
 });
 
 app.get('/article-three',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+   res.send('Article three requested and will besaved here');
 });
 
 app.get('/ui/style.css', function (req, res) {
