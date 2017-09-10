@@ -21,13 +21,13 @@ body {
 }
 
 
- .container {
- max-width: 800px;
- margin: 0 auto;
- color: brown;
- font-family: sans-serif;
- padding-top: 100px;
- padding-left: 40px;
- padding-right: 40px;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  color: brown;
+  font-family: sans-serif;
+  padding-top: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
       
