@@ -77,11 +77,11 @@ app.get('/ui/madi.png', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/:articleName',function(req, res){
+app.get('/article-one',function(req, res){
 // articleName = article-one 
 // articles[articleName] == { content of the object of articles
-var articleName = req.params.articleName;
-res.send(createtemplate(articles[articleName]));
+var articleone = req.params.articleName;
+res.send(createtemplate(articles[articleone]));
 });
 
 var port = 80;
