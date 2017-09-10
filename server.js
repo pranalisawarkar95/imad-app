@@ -10,12 +10,9 @@ var articleOne = {
     heading: 'Article one',
     date: 'sept 8, 2017',
     content:'
-        <p>
-            This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-        </p>'
-
-        
-            
+    <p>
+        This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+    </p>'
 };
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
