@@ -28,7 +28,7 @@ articleOne:{
 
 articleTwo: {
            title: 'Article two | pranali sawarkar',
-   heading: 'Article one',
+   heading: 'Article two',
    date: 'sept 8, 2017',
   content:`
   <p>
@@ -45,7 +45,7 @@ articleTwo: {
 
 articleThree: {
          title: 'Article three | pranali sawarkar',
-   heading: 'Article one',
+   heading: 'Article three',
    date: 'sept 8, 2017',
   content:`
   <p>
@@ -124,8 +124,6 @@ app.get('/article-one',function(req,res){
 app.get('/article-one',function(req,res){
      res.send(createtemplate(articleThree));
 });
-
-
 app.get('/ui/style.css', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
