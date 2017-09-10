@@ -6,8 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 var articleOne = {
-   title: 'Article-one | pranali sawarkar',
-   heading: 'Article-one',
+   title: 'Article one | pranali sawarkar',
+   heading: 'Article one',
    date: 'sept 8, 2017',
   content:`
   <p>
@@ -31,7 +31,9 @@ var content = data.content;
 var htmltemplate =`
 <html>
 <head>
-    <title>${title}</title>
+    <title>
+    ${title}
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="/ui/style.css" rel="stylesheet" />
 </head>
@@ -45,10 +47,16 @@ var htmltemplate =`
     
     <h3>Article One</h3>
     
-    <div>${date}</div>
+    <div>
+   
+    ${date}
+    
+    </div>
     
     <div>
+        
         ${content}
+        
     </div>
     </div>
 </body>
@@ -61,7 +69,7 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
+app.get('/article one',function(req,res){
      res.send(createTemplate(article-One));
 });
 
