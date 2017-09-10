@@ -9,10 +9,16 @@ var articleOne = {
    title: 'Article one | pranali sawarkar',
    heading: 'Article one',
    date: 'sept 8, 2017',
-  content:'
-   <p>
-      This is the content for my first article. This is the content for my first article. This is the content for my first article.
-   </p>'
+  content: '
+  <p>
+     This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+  </p>
+  <p>
+    This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+ </p>
+<p>
+    This is the content for my first article.This is the content for my first article. This is the content for my first article.This is the content for my first article.   
+ </p>'
 };
        
 app.get('/', function (req, res) {
