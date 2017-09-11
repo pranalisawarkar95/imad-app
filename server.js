@@ -9,7 +9,7 @@ var articles={
     
 'article one': {
         
-   title: 'Article one | pranali sawarkar',
+   title: 'Article-one | pranali sawarkar',
    heading: 'Article one',
    date: 'sept 8, 2017',
   content:`
@@ -26,7 +26,7 @@ var articles={
 },     
       
 
-'article two': {
+'article-two': {
    title: 'Article two| pranali sawarkar',
    heading: 'Article two',
    date: 'sept 9, 2017',
@@ -43,7 +43,7 @@ var articles={
  },
     
 
-'articleThree': {
+'article-three': {
    title: 'Article three | pranali sawarkar',
    heading: 'Article three',
    date: 'sept 10, 2017',
@@ -110,23 +110,19 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName', function (req, res) {
- //articleName==article-one
- //articles[articleName]=={}content oject for article one
- 
- 
-var articleName = req.params.articleName;
-res.send(createTemplate(articles[articleName]));
+app.get('/:articlename', function (req, res) {
+//articleone ==article-one
+//article[articlename]={} content for article one
+var articlename = req.params.articlename;
+res.send(createTemplate(articles[articlename]));
 });
 
-
-app.get('/ui/style.css', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+app.get('/ui/main.js', function (req, res) {
+res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-
 
 app.get('/ui/madi.png', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
@@ -136,3 +132,4 @@ var port = 80;
 app.listen(port, function () {
 console.log(`IMAD course app listening on port ${port}!`);
 });
+
