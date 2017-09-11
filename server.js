@@ -26,7 +26,7 @@ var articles={
 },     
       
 
-'article=two': {
+'article-two': {
    title: 'Article two | pranali sawarkar',
    heading: 'Article two',
    date: 'sept 9, 2017',
@@ -111,8 +111,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articleName', function (req, res) {
-//articleName ==article-one
-//article[articlename]={} content for article one
+
 var articlename = req.params.articleName;
 res.send(createtemplate(articles[articlename]));
 });
