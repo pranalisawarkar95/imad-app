@@ -43,7 +43,7 @@ var articles={
  },
     
 
-'article three': {
+'articleThree': {
    title: 'Article three | pranali sawarkar',
    heading: 'Article three',
    date: 'sept 10, 2017',
