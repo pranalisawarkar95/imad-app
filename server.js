@@ -61,14 +61,14 @@ var articles={
 };
 
 
-function createtemplate (data){
+function createTemplate (data){
 
 var title = data.title;
 var heading = data.heading;
 var date = data.date;
 var content = data.content;
 
-var htmltemplate =`
+var htmlTemplate =`
 <html>
 <head>
     <title>
@@ -102,7 +102,7 @@ var htmltemplate =`
 </body>
 
 `;
-return htmltemplate;
+return htmlTemplate;
 }
 
 
@@ -113,7 +113,7 @@ app.get('/', function (req, res) {
 app.get('/:articleName', function (req, res) {
 
 var articlename = req.params.articleName;
-res.send(createtemplate(articles[articlename]));
+res.send(createTemplate(articles[articlename]));
 });
 
 
