@@ -9,8 +9,8 @@ var articles={
     
 'article-one': {
         
-   title: 'Article one | pranali sawarkar',
-   heading: 'Article one',
+   title: 'Article two | pranali sawarkar',
+   heading: 'Article two',
    date: 'sept 8, 2017',
   content:`
   <p>
@@ -27,8 +27,8 @@ var articles={
       
 
 'article-two': {
-   title: 'Article two | pranali sawarkar',
-   heading: 'Article two',
+   title: 'Article one| pranali sawarkar',
+   heading: 'Article one',
    date: 'sept 9, 2017',
   content:`
   <p>
