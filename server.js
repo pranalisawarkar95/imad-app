@@ -110,6 +110,14 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+
+app.get('/favicon.ico', function (req, res) {
+res.sendFile(path.join(__dirnam, 'ui','favicon.ico'));
+});
+
+
+
+
 app.get('/:articlename', function (req, res) {
 //articleone ==article-one
 //article[articlename]={} content for article one
@@ -126,9 +134,6 @@ res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
 
-app.get('/favicon.ico', function (req, res) {
-res.sendFile(path.join(__dirnam, 'ui','favicon.ico'));
-});
 
 
 
