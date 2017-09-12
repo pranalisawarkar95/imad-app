@@ -8,7 +8,7 @@ var element = document.getElementById('main-text');
 
 //move the image
 
-var element = document.getElementById('img');
+var element = document.getElementById('madi');
   img.onclick = function() {
       
       console.log('inside function');
