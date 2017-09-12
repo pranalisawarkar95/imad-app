@@ -115,11 +115,6 @@ app.get('/:articlename', function (req, res) {
 //article[articlename]={} content for article one
 var articlename = req.params.articlename;
 res.send(createTemplate(articles[articlename]));
-
-app.get('/ui/favicon.ico', function (req, res) {
-res.sendFile(path.join(__dirnam, 'ui','favicon.ico'));
-});
-
 });
 
 app.get('/ui/style.css', function (req, res) {
@@ -130,13 +125,16 @@ app.get('/ui/main.js', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
-res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+
+app.get('/favicon.ico', function (req, res) {
+res.sendFile(path.join(__dirnam, 'ui','favicon.ico'));
 });
 
 
 
-
+app.get('/ui/madi.png', function (req, res) {
+res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
 
 
 
