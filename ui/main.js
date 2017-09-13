@@ -8,7 +8,7 @@ var request=new XMLHttpRequest();
 
 //capture the response and store it in a variable
 
-    if(request.onreadystate===XMLhttpRequest.DONE){
+    if(request.onreadyState===XMLHttpRequest.DONE){
         
 //TAKE SOME ACTION
 if(request.status===200){
@@ -38,7 +38,7 @@ for(var i=0;i<names.length;i++){
 list+='<li>'+names[i]+'</li>';
 }
 var ul=document.getElementById('namelist');
-ul.innerhtml=list;
+ul.innerHTML=list;
 
 };
 
