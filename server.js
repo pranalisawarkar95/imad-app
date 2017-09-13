@@ -121,12 +121,7 @@ app.get('/favicon.ico', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui','favicon.ico'));
 });
 
-var names = [];
-app.get('/submit-name', function(req,res){ //submit-name?name-xxxx
-var name = req.query.name;
-names.push(name);
-res.send(JSON.stringify(name));
-});
+
 
 
 app.get('/:articlename', function (req, res) {
@@ -144,7 +139,12 @@ app.get('/ui/main.js', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-
+var names = [];
+app.get('/submit-name', function(req,res){ 
+var name = req.query.name;
+names.push(name);
+res.send(JSON.stringify(name));
+});
 
 
 
