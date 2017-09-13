@@ -149,7 +149,7 @@ res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 
 var names = [];
 app.get('/submit-name/:name', function(req,res){
-var name = req.query.name;
+var name = req.params.name;
 names.push(name);
 res.send(JSON.stringify(name));
 });
