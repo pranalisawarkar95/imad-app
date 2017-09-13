@@ -33,6 +33,6 @@ button.onClick = function() {
       
   };
   //Make A Request
-  request.open('GET', 'http://kogam22.imad.hasura-app.io/counter', true);
+  request.open('GET', 'http://pranalisawarkar95.imad.hasura-app.io/counter', true);
   request.send(null);
 };
